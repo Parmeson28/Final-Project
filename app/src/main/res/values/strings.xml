@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FinalProject</string>
+    <string name="a_senha_deve_ter_ao_menos_4_caracteres">A senha deve ter ao menos 4 caracteres.</string>
 </resources>
