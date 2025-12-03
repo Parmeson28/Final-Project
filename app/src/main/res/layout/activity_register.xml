@@ -251,7 +251,7 @@
                                 android:id="@+id/etPassword"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                app:hint="@SenhaForte123"
+                                android:hint="\@SenhaForte123"
                                 android:padding="10dp"
                                 android:background="@color/hs_input"
                                 android:textColor="@color/hs_text"
@@ -313,7 +313,7 @@
                                 android:id="@+id/etPasswordConfirm"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                app:hint="@SenhaForte123"
+                                android:hint="\@SenhaForte123"
                                 android:padding="10dp"
                                 android:background="@color/hs_input"
                                 android:textColor="@color/hs_text"
@@ -349,6 +349,7 @@
                             android:layout_marginTop="4dp" />
                     </LinearLayout>
                 </LinearLayout>
+
 
                 <!-- Lembrar senha + link Entrar -->
                 <LinearLayout
