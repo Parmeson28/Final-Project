@@ -74,7 +74,7 @@
 
         <!-- CONTEÚDO SCROLLÁVEL -->
         <androidx.core.widget.NestedScrollView
-            android:id="@+id/scrollCobrancas"
+            android:id="@+id/scrollSair"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:padding="16dp"
@@ -86,198 +86,75 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-                <!-- CARD: Cobranças e Faturas -->
+                <!-- CARD central -->
                 <LinearLayout
-                    android:id="@+id/cardCobrancas"
+                    android:id="@+id/cardSair"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_card_dark"
                     android:orientation="vertical"
-                    android:padding="14dp"
-                    android:elevation="10dp">
+                    android:padding="18dp"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center_horizontal">
 
-                    <!-- Header -->
+                    <TextView
+                        android:id="@+id/tvSairTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tem certeza que deseja sair?"
+                        android:textColor="@color/hs_text"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvSairSub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Você será desconectado da sua conta neste dispositivo."
+                        android:textColor="@color/hs_muted"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:layout_marginBottom="16dp" />
+
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="12dp">
-
-                        <TextView
-                            android:id="@+id/tvCobrancasTitle"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Cobranças e Faturas"
-                            android:textColor="@color/hs_text"
-                            android:textStyle="bold"
-                            android:textSize="15sp" />
-
-                        <TextView
-                            android:id="@+id/tvCobrancasStatus"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Status: "
-                            android:textColor="@color/hs_muted"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:id="@+id/tvCobrancasStatusValor"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Em dia"
-                            android:textColor="@color/hs_accent"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            android:layout_marginStart="4dp" />
-                    </LinearLayout>
-
-                    <!-- Lista de faturas -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:dividerPadding="8dp">
-
-                        <!-- Fatura Nov 2025 -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:padding="12dp"
-                            android:background="@color/hs_panel"
-                            android:layout_marginBottom="8dp">
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tvFaturaNovTitulo"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Fatura — Nov 2025"
-                                    android:textColor="@color/hs_text"
-                                    android:textStyle="bold"
-                                    android:textSize="14sp" />
-
-                                <TextView
-                                    android:id="@+id/tvFaturaNovVenc"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Vencimento: 26/11/2025"
-                                    android:textColor="@color/hs_muted"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/tvFaturaNovValor"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="R$ 49,90"
-                                android:textColor="@color/hs_text"
-                                android:textStyle="bold"
-                                android:textSize="15sp" />
-                        </LinearLayout>
-
-                        <!-- Fatura Dez 2025 -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:padding="12dp"
-                            android:background="@color/hs_panel">
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tvFaturaDezTitulo"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Fatura — Dez 2025"
-                                    android:textColor="@color/hs_text"
-                                    android:textStyle="bold"
-                                    android:textSize="14sp" />
-
-                                <TextView
-                                    android:id="@+id/tvFaturaDezVenc"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Vencimento: 26/12/2025"
-                                    android:textColor="@color/hs_muted"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/tvFaturaDezValor"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="R$ 49,90"
-                                android:textColor="@color/hs_text"
-                                android:textStyle="bold"
-                                android:textSize="15sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <!-- Ações -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="12dp">
+                        android:gravity="center">
 
                         <Button
-                            android:id="@+id/btnPagarAgora"
-                            android:layout_width="0dp"
+                            android:id="@+id/btnCancelarSair"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:minHeight="48dp"
-                            android:background="@drawable/bg_btn_primary"
-                            android:text="Pagar agora"
-                            android:textAllCaps="false"
-                            android:textColor="@android:color/white"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/btnHistoricoPagamentos"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginStart="10dp"
                             android:minHeight="48dp"
                             android:background="@android:color/transparent"
-                            android:text="Histórico de Pagamentos"
+                            android:text="Cancelar"
                             android:textAllCaps="false"
                             android:textColor="@color/hs_text"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="12dp" />
+
+                        <Button
+                            android:id="@+id/btnConfirmarSair"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp"
+                            android:background="@drawable/bg_btn_primary"
+                            android:text="Sair"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Footer -->
-                <TextView
-                    android:id="@+id/tvCobrancasFooter"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Voltar para Conta • Treinos"
-                    android:textColor="@color/hs_muted"
-                    android:textSize="13sp"
-                    android:gravity="center"
-                    android:layout_marginTop="18dp" />
-
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -461,7 +338,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:text="Sair"
+            app:text="Sair"
             android:textAllCaps="false"
             android:textColor="@color/hs_danger" />
 
@@ -469,7 +346,7 @@
             android:id="@+id/drawerFooter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="© Harpia Fitness"
+            app:text="© Harpia Fitness"
             android:textColor="@android:color/white"
             android:textSize="13sp"
             android:gravity="center"/>

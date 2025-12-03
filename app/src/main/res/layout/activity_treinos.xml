@@ -74,7 +74,7 @@
 
         <!-- CONTEÚDO SCROLLÁVEL -->
         <androidx.core.widget.NestedScrollView
-            android:id="@+id/scrollCobrancas"
+            android:id="@+id/scrollTreinos"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:padding="16dp"
@@ -88,9 +88,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- CARD: Cobranças e Faturas -->
+                <!-- CARD: Treinos -->
                 <LinearLayout
-                    android:id="@+id/cardCobrancas"
+                    android:id="@+id/cardTreinos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_card_dark"
@@ -107,126 +107,98 @@
                         android:layout_marginBottom="12dp">
 
                         <TextView
-                            android:id="@+id/tvCobrancasTitle"
+                            android:id="@+id/tvTreinosTitle"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Cobranças e Faturas"
+                            android:text="Treinos"
                             android:textColor="@color/hs_text"
                             android:textStyle="bold"
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/tvCobrancasStatus"
+                            android:id="@+id/tvTreinosPlano"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Status: "
+                            android:text="Plano: Mensal"
                             android:textColor="@color/hs_muted"
                             android:textSize="13sp" />
-
-                        <TextView
-                            android:id="@+id/tvCobrancasStatusValor"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Em dia"
-                            android:textColor="@color/hs_accent"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            android:layout_marginStart="4dp" />
                     </LinearLayout>
 
-                    <!-- Lista de faturas -->
+                    <!-- Lista Treinos (summary-items) -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:dividerPadding="8dp">
 
-                        <!-- Fatura Nov 2025 -->
+                        <!-- Treino A -->
                         <LinearLayout
+                            android:id="@+id/itemTreinoA"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:padding="12dp"
+                            android:orientation="vertical"
                             android:background="@color/hs_panel"
+                            android:padding="12dp"
                             android:layout_marginBottom="8dp">
 
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tvFaturaNovTitulo"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Fatura — Nov 2025"
-                                    android:textColor="@color/hs_text"
-                                    android:textStyle="bold"
-                                    android:textSize="14sp" />
-
-                                <TextView
-                                    android:id="@+id/tvFaturaNovVenc"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Vencimento: 26/11/2025"
-                                    android:textColor="@color/hs_muted"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
-
                             <TextView
-                                android:id="@+id/tvFaturaNovValor"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="R$ 49,90"
+                                android:text="Treino A — Peito / Tríceps"
+                                android:textColor="@color/hs_muted"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3x séries • 45 min"
                                 android:textColor="@color/hs_text"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
-                                android:textSize="15sp" />
+                                android:layout_marginTop="2dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Segunda, Quarta, Sexta"
+                                android:textColor="@color/hs_muted"
+                                android:textSize="13sp"
+                                android:layout_marginTop="6dp" />
                         </LinearLayout>
 
-                        <!-- Fatura Dez 2025 -->
+                        <!-- Treino B -->
                         <LinearLayout
+                            android:id="@+id/itemTreinoB"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:padding="12dp"
-                            android:background="@color/hs_panel">
-
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tvFaturaDezTitulo"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Fatura — Dez 2025"
-                                    android:textColor="@color/hs_text"
-                                    android:textStyle="bold"
-                                    android:textSize="14sp" />
-
-                                <TextView
-                                    android:id="@+id/tvFaturaDezVenc"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Vencimento: 26/12/2025"
-                                    android:textColor="@color/hs_muted"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
+                            android:orientation="vertical"
+                            android:background="@color/hs_panel"
+                            android:padding="12dp">
 
                             <TextView
-                                android:id="@+id/tvFaturaDezValor"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="R$ 49,90"
+                                android:text="Treino B — Costas / Bíceps"
+                                android:textColor="@color/hs_muted"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3x séries • 40 min"
                                 android:textColor="@color/hs_text"
+                                android:textSize="15sp"
                                 android:textStyle="bold"
-                                android:textSize="15sp" />
+                                android:layout_marginTop="2dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Terça, Quinta"
+                                android:textColor="@color/hs_muted"
+                                android:textSize="13sp"
+                                android:layout_marginTop="6dp" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -238,35 +210,64 @@
                         android:layout_marginTop="12dp">
 
                         <Button
-                            android:id="@+id/btnPagarAgora"
+                            android:id="@+id/btnIniciarTreino"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:minHeight="48dp"
                             android:background="@drawable/bg_btn_primary"
-                            android:text="Pagar agora"
+                            android:text="Iniciar Treino"
                             android:textAllCaps="false"
                             android:textColor="@android:color/white"
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/btnHistoricoPagamentos"
+                            android:id="@+id/btnEditarPlanoTreino"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_marginStart="10dp"
                             android:minHeight="48dp"
                             android:background="@android:color/transparent"
-                            android:text="Histórico de Pagamentos"
+                            android:text="Editar Plano de Treino"
                             android:textAllCaps="false"
                             android:textColor="@color/hs_text"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
 
+                <!-- CARD: Histórico -->
+                <LinearLayout
+                    android:id="@+id/cardHistoricoTreinos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_dark"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/tvHistoricoTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Histórico"
+                        android:textColor="@color/hs_text"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tvHistoricoInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Última sessão: 29/11/2025 — 52 min"
+                        android:textColor="@color/hs_muted"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
                 <!-- Footer -->
                 <TextView
-                    android:id="@+id/tvCobrancasFooter"
+                    android:id="@+id/tvTreinosFooter"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Voltar para Conta • Treinos"
@@ -278,6 +279,7 @@
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

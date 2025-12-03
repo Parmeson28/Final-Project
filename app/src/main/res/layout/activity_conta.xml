@@ -69,7 +69,7 @@
                 android:background="@android:color/transparent"
                 android:contentDescription="Notificações"
                 android:src="@android:drawable/ic_dialog_email"
-                android:tint="@android:color/white" />
+                app:tint="@android:color/white" />
         </LinearLayout>
 
         <!-- CONTEÚDO SCROLLÁVEL -->
@@ -382,7 +382,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="space_between">
+                app:gravity="space_between">
 
                 <TextView
                     android:layout_width="0dp"
