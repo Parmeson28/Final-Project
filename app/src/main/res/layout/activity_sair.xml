@@ -225,7 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:gravity="space_between">
+                android:gravity="center_vertical">
 
                 <TextView
                     android:layout_width="0dp"
@@ -240,30 +240,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Mensal"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="4dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Status"
-                    android:textColor="@android:color/white"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/drawerStatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ativo"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
                     android:textSize="14sp" />
@@ -338,7 +314,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            app:text="Sair"
+            android:text="Sair"
             android:textAllCaps="false"
             android:textColor="@color/hs_danger" />
 
@@ -346,11 +322,12 @@
             android:id="@+id/drawerFooter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:text="© Harpia Fitness"
+            android:text="© Harpia Fitness"
             android:textColor="@android:color/white"
             android:textSize="13sp"
-            android:gravity="center"/>
+            android:gravity="center" />
 
     </LinearLayout>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

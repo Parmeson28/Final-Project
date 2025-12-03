@@ -131,7 +131,7 @@
                     android:id="@+id/tvUserError"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:text="Por favor informe email ou CPF válido."
+                    android:text="Por favor informe email ou CPF válido."
                     android:textSize="13sp"
                     android:textColor="@color/hs_danger"
                     android:visibility="gone"

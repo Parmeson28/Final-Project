@@ -205,14 +205,15 @@
                         android:inputType="number" />
 
                     <TextView
-                        android:id="@+id/tvCpfError"
+                        android:id="@+id/tvUserError"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:text="CPF inválido (use somente números ou formato XXX.XXX.XXX-XX)."
+                        android:text="Por favor informe email ou CPF válido."
                         android:textSize="13sp"
                         android:textColor="@color/hs_danger"
                         android:visibility="gone"
                         android:layout_marginTop="4dp" />
+
                 </LinearLayout>
 
                 <!-- Grid 2 colunas: senha / confirmar senha -->
@@ -279,7 +280,7 @@
                             android:id="@+id/tvPassError"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:text="Senha deve ter ao menos 6 caracteres."
+                            android:text="Senha deve ter ao menos 6 caracteres."
                             android:textSize="13sp"
                             android:textColor="@color/hs_danger"
                             android:visibility="gone"
@@ -341,7 +342,7 @@
                             android:id="@+id/tvPassConfirmError"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:text="As senhas não coincidem."
+                            android:text="As senhas não coincidem."
                             android:textSize="13sp"
                             android:textColor="@color/hs_danger"
                             android:visibility="gone"
@@ -434,12 +435,13 @@
                     android:id="@+id/tvHelp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:text="  •  Ajuda"
+                    android:text="  •  Ajuda"
                     android:textColor="@color/hs_muted"
                     android:textSize="13sp"
                     android:clickable="true"
                     android:focusable="true" />
             </LinearLayout>
+
 
         </LinearLayout>
 
