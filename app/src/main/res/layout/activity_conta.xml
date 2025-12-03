@@ -64,11 +64,11 @@
 
             <ImageButton
                 android:id="@+id/btnNotifications"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="@android:color/transparent"
                 android:contentDescription="Notificações"
-                android:src="@android:drawable/ic_dialog_email"
+                android:src="@android:drawable/ic_popup_reminder"
                 app:tint="@android:color/white" />
         </LinearLayout>
 
@@ -116,13 +116,6 @@
                             android:textStyle="bold"
                             android:textSize="15sp" />
 
-                        <TextView
-                            android:id="@+id/tvMinhaContaUltimoPgto"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Último pagamento: 26/11/2025"
-                            android:textColor="@color/hs_muted"
-                            android:textSize="13sp" />
                     </LinearLayout>
 
                     <!-- Grid de dados -->
@@ -150,10 +143,10 @@
                                 android:id="@+id/tvContaNome"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Gustavo Petry"
+                                android:text="Nome usuário"
                                 android:textColor="@color/hs_text"
-                                android:textStyle="bold"
-                                android:textSize="15sp" />
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <!-- Email -->
@@ -174,7 +167,7 @@
                                 android:id="@+id/tvContaEmail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="gustavo@example.com"
+                                android:text="usuario@example.com"
                                 android:textColor="@color/hs_text"
                                 android:textSize="14sp" />
                         </LinearLayout>
@@ -282,31 +275,10 @@
                             android:textColor="@android:color/white"
                             android:textStyle="bold" />
 
-                        <Button
-                            android:id="@+id/btnVerFaturas"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_marginStart="10dp"
-                            android:minHeight="48dp"
-                            android:background="@android:color/transparent"
-                            android:text="Ver Faturas"
-                            android:textAllCaps="false"
-                            android:textColor="@color/hs_text"
-                            android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <!-- Footer -->
-                <TextView
-                    android:id="@+id/tvContaFooter"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Voltar para Conta • Treinos"
-                    android:textColor="@color/hs_muted"
-                    android:textSize="13sp"
-                    android:gravity="center"
-                    android:layout_marginTop="18dp" />
 
             </LinearLayout>
 

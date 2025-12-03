@@ -90,15 +90,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tvRegisterLead"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Preencha os dados abaixo para cadastrar-se."
-                    android:textColor="@color/hs_muted"
-                    android:textSize="13sp"
-                    android:layout_marginTop="4dp" />
-
                 <!-- Nome completo -->
                 <LinearLayout
                     android:id="@+id/fieldFullName"
@@ -416,15 +407,6 @@
                     android:onClick="handleRegister"/>
 
                 <!-- helper -->
-                <TextView
-                    android:id="@+id/tvTermsHelper"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ao se cadastrar, você concorda com os termos do serviço."
-                    android:textColor="@color/hs_muted"
-                    android:textSize="13sp"
-                    android:gravity="center"
-                    android:layout_marginTop="8dp" />
 
             </LinearLayout>
 
