@@ -89,14 +89,6 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvLoginLead"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Insira seu Email ou CPF e sua senha para acessar."
-                android:textColor="@color/hs_muted"
-                android:textSize="13sp"
-                android:layout_marginTop="4dp" />
 
             <!-- Campo: Email ou CPF (.field) -->
             <LinearLayout
@@ -196,15 +188,7 @@
                         app:layout_constraintBottom_toBottomOf="@id/etPassword" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/tvPasswordError"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A senha deve ter ao menos 4 caracteres."
-                    android:textSize="13sp"
-                    android:textColor="@color/hs_danger"
-                    android:visibility="gone"
-                    android:layout_marginTop="4dp" />
+
             </LinearLayout>
 
             <!-- linha: lembrar / esqueci (.row-between) -->
