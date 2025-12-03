@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,8 +19,16 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
     }
 
-    public void disable(View v){
-        Intent i = new Intent(this, AppScreen.class);
-        startActivity(i);
+    public void handleLogin(View v){
+        TextView tu = findViewById(R.id.etUser);
+        String user = tu.getText().toString();
+
+        TextView tp = findViewById(R.id.etPassword);
+        String password = tp.getText().toString();
+
+        if(user.equals("Gamer") && password.equals("123")){
+            startActivity(new Intent(this, AppScreen.class));
+        }
     }
+
 }

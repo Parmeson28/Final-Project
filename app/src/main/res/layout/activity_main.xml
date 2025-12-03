@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_login_gradient"
@@ -118,6 +119,7 @@
                     android:id="@+id/etUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
                     android:hint="Insira o Email ou o CPF"
                     android:inputType="textEmailAddress"
                     android:padding="12dp"
@@ -165,6 +167,7 @@
                         android:id="@+id/etPassword"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:minHeight="48dp"
                         android:hint="Insira a senha"
                         android:inputType="textPassword"
                         android:padding="12dp"
@@ -180,12 +183,13 @@
 
                     <ImageButton
                         android:id="@+id/btnTogglePassword"
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:scaleType="fitCenter"
                         android:background="@android:color/transparent"
                         android:contentDescription="Mostrar senha"
                         android:src="@android:drawable/ic_menu_view"
-                        android:padding="4dp"
                         app:tint="@color/hs_muted"
                         app:layout_constraintEnd_toEndOf="@id/etPassword"
                         app:layout_constraintTop_toTopOf="@id/etPassword"
@@ -216,6 +220,8 @@
                     android:id="@+id/cbRemember"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:gravity="center_vertical"
                     android:text="Lembrar-me"
                     android:textColor="@color/hs_muted"
                     android:textSize="13sp" />
@@ -229,6 +235,8 @@
                     android:id="@+id/tvForgotPassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:gravity="center_vertical"
                     android:text="Esqueci a senha"
                     android:textColor="@color/hs_muted"
                     android:textSize="13sp"
@@ -242,13 +250,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:minHeight="44dp"
                 android:background="@drawable/bg_btn_primary"
+                android:minHeight="48dp"
+                android:onClick="handleLogin"
                 android:text="Entrar"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <!-- footer dentro do card -->
             <LinearLayout
@@ -271,6 +281,8 @@
                     android:id="@+id/tvCreateAccount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:gravity="center_vertical"
                     android:text="Criar conta"
                     android:textColor="@color/hs_accent"
                     android:textSize="13sp"

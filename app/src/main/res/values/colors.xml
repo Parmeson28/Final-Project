@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Tema Harpy / Harpia -->
-    <color name="hs_bg">#0F1918</color>
-    <color name="hs_panel">#1A2524</color>
-    <color name="hs_input">#2A3534</color>
-    <color name="hs_muted">#98A4A1</color>
-    <color name="hs_text">#E6EFE9</color>
-    <color name="hs_accent">#16A34A</color>
-    <color name="hs_danger">#EF4444</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="hs_bg">#121212</color>
+    <color name="hs_accent">#00C853</color>
+    <color name="hs_text">#FFFFFF</color>
+    <color name="hs_muted">#B0B0B0</color>
+    <color name="hs_input">#2C2C2C</color>
+    <color name="hs_panel">#1E1E1E</color>
+    <color name="hs_danger">#FF5252</color>
 </resources>
