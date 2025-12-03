@@ -8,15 +8,20 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity{
 
+    DataBaseModel db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        db = new DataBaseModel(this);
     }
 
     public void handleLogin(View v){
@@ -26,8 +31,10 @@ public class MainActivity extends AppCompatActivity{
         TextView tp = findViewById(R.id.etPassword);
         String password = tp.getText().toString();
 
-        if(user.equals("Gamer") && password.equals("123")){
+        if(db.checkEmailPassword(user, password)){
             startActivity(new Intent(this, AppScreen.class));
+        }else{
+            Toast.makeText(MainActivity.this, "Login invalido", Toast.LENGTH_SHORT).show();
         }
     }
     public void createAccount(View v){

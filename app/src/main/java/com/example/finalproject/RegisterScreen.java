@@ -6,12 +6,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class RegisterScreen extends AppCompatActivity {
-
-    EditText etName, etEmail, etCpf, etPassword, etRepassword;
     DataBaseModel db;
 
     @Override
@@ -33,13 +32,21 @@ public class RegisterScreen extends AppCompatActivity {
         TextView tp = findViewById(R.id.etPassword);
         String password = tp.getText().toString();
 
-        TextView tcp = findViewById(R.id.etPassword);
-        String confirmPassword = tp.getText().toString();
+        TextView tcp = findViewById(R.id.etPasswordConfirm);
+        String confirmPassword = tcp.getText().toString();
 
-        if(confirmPassword.equals(password)){
-            password = confirmPassword;
-        }else {
-            Log.d("Senha errada", "Senha errada");
+
+        if(user.equals("") || email.equals("") || cpf.equals("") || password.equals("")){
+            Toast.makeText(RegisterScreen.this, "Os campos não foram preenchidos corretamente", Toast.LENGTH_LONG).show();
+        }else{
+            if(confirmPassword.equals(password)){
+                Boolean insert = db.insertData(email, password, user, cpf);
+
+            }else {
+                Toast.makeText(RegisterScreen.this, "Senha está incorreta", Toast.LENGTH_SHORT).show();
+            }
+
+
         }
 
     }
