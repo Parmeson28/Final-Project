@@ -17,6 +17,8 @@ public class RegisterScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        db = new DataBaseModel(this);
     }
 
     public void handleRegister(View v){
@@ -42,6 +44,7 @@ public class RegisterScreen extends AppCompatActivity {
             if(confirmPassword.equals(password)){
                 Boolean insert = db.insertData(email, password, user, cpf);
 
+                startActivity(new Intent(this, MainActivity.class));
             }else {
                 Toast.makeText(RegisterScreen.this, "Senha está incorreta", Toast.LENGTH_SHORT).show();
             }
