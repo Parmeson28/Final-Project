@@ -288,7 +288,8 @@
                     android:textSize="13sp"
                     android:textStyle="bold"
                     android:clickable="true"
-                    android:focusable="true" />
+                    android:focusable="true"
+                    android:onClick="createAccount"/>
             </LinearLayout>
 
         </LinearLayout> <!-- /login_card -->

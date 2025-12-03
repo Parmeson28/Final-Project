@@ -30,5 +30,7 @@ public class MainActivity extends AppCompatActivity{
             startActivity(new Intent(this, AppScreen.class));
         }
     }
-
+    public void createAccount(View v){
+        startActivity(new Intent(this, RegisterScreen.class));
+    }
 }
