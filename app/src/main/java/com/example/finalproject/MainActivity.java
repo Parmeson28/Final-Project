@@ -3,6 +3,7 @@ package com.example.finalproject;
 import static android.os.SystemClock.sleep;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity{
         String password = tp.getText().toString();
 
         if(db.checkEmailPassword(user, password) || (user.equals("Gamer") && password.equals("123"))){
+
+            SharedPreferences sharedPreferences = getSharedPreferences("MinhasPreferencias", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+
+            editor.putString("usuario_logado", user);
+            editor.apply(); // Confirma a gravação
+
             startActivity(new Intent(this, AppScreen.class));
         }else{
             Toast.makeText(MainActivity.this, "Login invalido", Toast.LENGTH_SHORT).show();
